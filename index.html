@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <title>UM6P Sat initiative</title>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+      <!-- Import the component -->
+      <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  </head>
+  <body> 
+    <nav>
+      <div class="nav-wrapper blue darken-3">
+        <a href="#" class="brand-logo center">UM6P Sat initiative</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="#">Team</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Roadmap</a></li>
+        </ul>
+      </div>
+    </nav>
+  
+
+
+    <div height="100%">
+      <!-- Use it like any other HTML element -->
+      <model-viewer style="height: 100%; width:100%" alt="UM6P Sat initiative" src="data/um6p_sat_mockup.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp" seamless-poster shadow-intensity="1" camera-controls enable-pan>
+      
+      </model-viewer>
+
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  </body>
+</html>
