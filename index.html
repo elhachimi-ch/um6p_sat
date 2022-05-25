@@ -8,8 +8,23 @@
 
       <!-- Compiled and minified CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body> 
+    <style>
+
+      .tabs .tab a:hover {
+        background-color:#b3e5fc  ;
+        color:#000;
+    } /*Text color on hover*/
+
+    .tabs .indicator {
+      background-color:#01579b;
+  } /*Color of underline*/
+
+    </style>
     <nav>
       <div class="nav-wrapper blue darken-3">
         <a href="#" class="brand-logo center">UM6P Sat initiative</a>
@@ -20,19 +35,59 @@
         </ul>
       </div>
     </nav>
+
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s4 "><a href="#test1" >Exploded CubeSat</a></li>
+          <li class="tab col s4"><a class="active" href="#test2" class="black-text">Assembled CubeSat</a></li>
+          <li class="tab col s4"><a href="#test3" class="black-text">Opened CubeSat</a></li>
+          
+        </ul>
+      </div>
+      <div id="test1" class="col s12">
+        
+        <div height="100%">
+          <!-- Use it like any other HTML element -->
+          <model-viewer style="height: 100%; width:100%" alt="UM6P Sat initiative" src="data/cubesat_exploded.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp" seamless-poster shadow-intensity="1" camera-controls enable-pan>
+          
+          </model-viewer>
+
+        </div>
+      </div>
+      <div id="test2" class="col s12">
+        
+        <div height="100%">
+          <!-- Use it like any other HTML element -->
+          <model-viewer style="height: 100%; width:100%" alt="UM6P Sat initiative" src="data/cubesat_assembled.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp" seamless-poster shadow-intensity="1" camera-controls enable-pan>
+          
+          </model-viewer>
+
+        </div>
+      </div>
+      <div id="test3" class="col s12">
+        
+        <div height="100%">
+          <!-- Use it like any other HTML element -->
+          <model-viewer style="height: 100%; width:100%" alt="UM6P Sat initiative" src="data/cubesat_opened.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp" seamless-poster shadow-intensity="1" camera-controls enable-pan>
+          
+          </model-viewer>
+
+        </div>
+      </div>
+      
+    </div>
   
 
 
-    <div height="100%">
-      <!-- Use it like any other HTML element -->
-      <model-viewer style="height: 100%; width:100%" alt="UM6P Sat initiative" src="data/um6p_sat_mockup.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp" seamless-poster shadow-intensity="1" camera-controls enable-pan>
+
+    
+
+    <script>
+      M.AutoInit();
       
-      </model-viewer>
 
-    </div>
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </script>
 
   </body>
 </html>
