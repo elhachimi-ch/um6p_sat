@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <title>UM6P Sat initiative</title>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+      <!-- Import the component -->
+      <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body> 
+    <style>
+
+      .tabs .tab a:hover {
+        background-color:#b3e5fc  ;
+        color:#000;
+    } /*Text color on hover*/
+
+    .tabs .indicator {
+      background-color:#01579b;
+  } /*Color of underline*/
+
+  .tabs .tab a:focus, .tabs .tab a:focus.active {
+    /* background-color: rgba(246, 178, 181, 0.2); */
+    background-color:#b3e5fc;
+    outline: none;
+}
+
+    </style>
+    <nav>
+      <div class="nav-wrapper blue darken-3">
+        <a href="#" class="brand-logo center">UM6P Sat initiative</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="#">Team</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Roadmap</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col s12 no-padding">
+        <ul class="tabs">
+          <li class="tab col s4 "><a href="#test1" class="black-text">CubeSat: Exploded view</a></li>
+          <li class="tab col s4"><a class="active black-text" href="#test2">CubeSat</a></li>
+          <li class="tab col s4"><a href="#test3" class="black-text">CubeSat: View inside</a></li> 
+          
+        </ul>
+      </div>
+      <div id="test1" class="col s12">
+        
+        <div height="100%">
+          <!-- Use it like any other HTML element -->
+          <model-viewer style="height: 80%; width:100%" alt="UM6P Sat initiative" src="data/cubesat_exploded.glb" ar ar-modes="webxr scene-viewer quick-look" seamless-poster shadow-intensity="1" camera-controls enable-pan>
+          
+          </model-viewer>
+
+        </div>
+      </div>
+      <div id="test2" class="col s12">
+        
+        <div height="100%">
+          <!-- Use it like any other HTML element -->
+          <model-viewer style="height: 80%; width:100%" alt="UM6P Sat initiative" src="data/cubesat_assembled.glb" ar ar-modes="webxr scene-viewer quick-look" seamless-poster shadow-intensity="1" camera-controls enable-pan>
+          
+          </model-viewer>
+
+        </div>
+      </div>
+      <div id="test3" class="col s12">
+        
+        <div height="100%">
+          <!-- Use it like any other HTML element -->
+          <model-viewer style="height: 80%; width:100%" alt="UM6P Sat initiative" src="data/cubesat_opened.glb" ar ar-modes="webxr scene-viewer quick-look"  seamless-poster shadow-intensity="1" camera-controls enable-pan>
+          
+          </model-viewer>
+
+        </div>
+      </div>
+      
+    </div>
+  
+
+
+
+    
+
+    <script>
+      M.AutoInit();
+      
+
+    </script>
+
+  </body>
+</html>

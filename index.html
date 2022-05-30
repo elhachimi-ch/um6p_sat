@@ -1,99 +1,479 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <title>UM6P Sat initiative</title>
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-      <!-- Import the component -->
-      <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<!DOCTYPE html>
+<html lang="UM6P-SaT">
+<head>
+	<title>UM6P-SaT</title>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="img/logos/logo-shortcut.png" />	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-      <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <!-- Compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  </head>
-  <body> 
-    <style>
+	<!-- Bootstrap CSS-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
-      .tabs .tab a:hover {
-        background-color:#b3e5fc  ;
-        color:#000;
-    } /*Text color on hover*/
+	<!-- Themify icons -->
+	<link rel="stylesheet" type="text/css" href="css/themify-icons.css">
+	
+	<!-- Font-Awesome -->
+	<link rel="stylesheet" type="text/css" href="css/fontawesome-all.css">  
 
-    .tabs .indicator {
-      background-color:#01579b;
-  } /*Color of underline*/
+	<!-- Icomoon -->
+	<link rel="stylesheet" type="text/css" href="css/icomoon.css"> 	
 
-  .tabs .tab a:focus, .tabs .tab a:focus.active {
-    /* background-color: rgba(246, 178, 181, 0.2); */
-    background-color:#b3e5fc;
-    outline: none;
-}
+	<!-- Plugins -->
+	<link rel="stylesheet" type="text/css" href="css/plugins.css">
 
-    </style>
-    <nav>
-      <div class="nav-wrapper blue darken-3">
-        <a href="#" class="brand-logo center">UM6P Sat initiative</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><a href="#">Team</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Roadmap</a></li>
-        </ul>
-      </div>
-    </nav>
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">	
 
-    <div class="row">
-      <div class="col s12 no-padding">
-        <ul class="tabs">
-          <li class="tab col s4 "><a href="#test1" class="black-text">CubeSat: Exploded view</a></li>
-          <li class="tab col s4"><a class="active black-text" href="#test2">CubeSat</a></li>
-          <li class="tab col s4"><a href="#test3" class="black-text">CubeSat: View inside</a></li> 
-          
-        </ul>
-      </div>
-      <div id="test1" class="col s12">
-        
-        <div height="100%">
-          <!-- Use it like any other HTML element -->
-          <model-viewer style="height: 80%; width:100%" alt="UM6P Sat initiative" src="data/cubesat_exploded.glb" ar ar-modes="webxr scene-viewer quick-look" seamless-poster shadow-intensity="1" camera-controls enable-pan>
-          
-          </model-viewer>
+	<!-- Owl Carousel  -->
+    <link rel="stylesheet" href="css/owl.carousel.css">     
 
-        </div>
-      </div>
-      <div id="test2" class="col s12">
-        
-        <div height="100%">
-          <!-- Use it like any other HTML element -->
-          <model-viewer style="height: 80%; width:100%" alt="UM6P Sat initiative" src="data/cubesat_assembled.glb" ar ar-modes="webxr scene-viewer quick-look" seamless-poster shadow-intensity="1" camera-controls enable-pan>
-          
-          </model-viewer>
+	<!-- Swiper Slider Styles -->
+    <link rel="stylesheet" href="css/slider.css">            
 
-        </div>
-      </div>
-      <div id="test3" class="col s12">
-        
-        <div height="100%">
-          <!-- Use it like any other HTML element -->
-          <model-viewer style="height: 80%; width:100%" alt="UM6P Sat initiative" src="data/cubesat_opened.glb" ar ar-modes="webxr scene-viewer quick-look"  seamless-poster shadow-intensity="1" camera-controls enable-pan>
-          
-          </model-viewer>
+    <!-- Navbar Styles -->
+    <link rel="stylesheet" type="text/css" href="css/navigation.css" id="navigation_menu">
+	
+	<!-- Main Styles -->
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css" id="main_styles">
 
-        </div>
-      </div>
-      
-    </div>
-  
+	<!-- Fonts Google -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+</head>
+<body>
 
 
 
-    
+<!-- Preloader Start-->
+<div id="preloader">
+	<div class="row loader">
+		<div class="loader-icon"></div>
+	</div>
+</div>
+<!-- Preloader End -->
 
-    <script>
-      M.AutoInit();
-      
 
-    </script>
 
-  </body>
+<!-- Top-Bar START -->
+<div id="top-bar" class="hidden-md-down">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 col-12">
+				<ul class="top-bar-info">				 
+					<li><i class="fas fa-map-marker-alt"></i>Ben Guerir, Morocco</li>
+					<li><i class="fa fa-envelope"></i>Email: UM6PSaT@um6p.onmicrosoft.com</li>
+				</ul>					
+			</div>	
+		</div>
+	</div>
+</div>	
+<!-- Top-Bar END -->
+
+
+
+<!-- Navbar START -->
+<header>
+	<nav id="navigation4" class="container navigation">
+		<div class="nav-header">
+			<a class="nav-brand" href="index.html">
+				<img src="img/logos/sat.png" alt="logo" id="main_logo">
+			</a>
+			<div class="nav-toggle"></div>
+		</div>
+
+		<!-- Search START -->
+		<div class="nav-search">
+			<div class="nav-search-button">
+				<i class="ti-search"></i>
+			</div>
+			<form>
+				<div class="nav-search-inner">
+					<input type="search" name="search" placeholder="Enter your keywords..."/>
+				</div>
+			</form>
+		</div>
+		<!-- Search END -->
+
+		<div class="nav-menus-wrapper">
+			<ul class="nav-menu align-to-right">
+				<li><a href="index.html">Home</a></li>									
+				<li><a href="#um6psat">UM6P Sat</a></li>				
+				<li><a href="#simulation">Simualtion</a></li>
+				<li><a href="#event">Event / Blog</a>
+				<!-- <li><a href="#team">Team</a></li> -->
+				<li><a href="#contact">Contact</a></li>											
+			</ul>
+		</div>					
+	</nav>	
+</header>	
+<!-- Navbar END -->
+
+
+
+<!-- Slider START -->
+<div class="swiper-main-slider swiper-container">
+	<div class="swiper-wrapper">
+		<!-- Slide 1 Start -->
+		<div class="swiper-slide black-overlay-40" style="background-image:url(https://spacegeneration.org/wp-content/uploads/2021/03/alen-space-satellite-constellation.jpg);">
+			<div class="container">
+                <div class="slider-content left-holder">
+                	<h3 class="extra-light animated fadeInDown">Mohammed VI Polytechnic <span class="primary-color">University</span></h3>
+                    <h2 class="normal animated fadeInDown">UM6P-SaT</h2>
+                    <h5 class="light animated fadeInUp">Digitally forward creative. Connected creativity. We are intelligence in action. Innovate. Inspire.</h5>	
+                    <div class="animated fadeInUp mt-30">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScFwm7_Zh4UNF2Qrp0LRI7EVYuOH9xmLVb8phhuQHhmooro4w/viewform" class="primary-button semi-rounded button-md w-300">Join Us</a>
+                        <!-- <a href="#" class="white-button semi-rounded button-md w-200">Learn More</a> -->
+                    </div>
+                </div>
+			</div>
+		</div>
+		<!-- Slide 1 End -->
+		
+		<!-- Slide 2 Start -->	
+		<div class="swiper-slide black-overlay-50" style="background-image:url(https://blog.csiro.au/wp-content/uploads/2018/01/NovaSARoverAustralia2017-NovaSARS-an-innovative-SBand-Synthetic-Aperture-Radar-platform-1024x682.jpg);">
+			<div class="container">
+                <div class="slider-content left-holder">
+                	<h3 class="extra-light animated fadeInDown"><span class="primary-color">Welcome</span></h3>
+                    <h2 class="normal animated fadeInDown">UM6P-SaT</h2>
+                    <h5 class="light animated fadeInUp"></h5>	
+                    <div class="animated fadeInUp mt-30">
+                        <a href="#simulation" class="primary-button semi-rounded button-md w-300">CubeSat Simulation</a>
+                        <!-- <a href="#" class="white-button semi-rounded button-md w-200">Learn More</a> -->
+                    </div>
+                </div>
+			</div>
+		</div>
+		<!-- Slide 2 End -->		
+	</div>
+	<!-- Add Arrows -->
+	<div class="swiper-button-next"></div>
+	<div class="swiper-button-prev"></div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>	
+</div>
+<!-- Slider END -->
+
+<!-- Info Section START -->
+<div class="section-block">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-12">
+				<img src="img/poster.png" class="rounded-border shadow-primary" alt="img">
+			</div>
+
+			<div class="col-md-6 col-sm-6 col-12">
+				<div class="pl-45-md">
+					<div class="section-heading left-holder">
+						<h3 id="um6psat" class="bold">About UM6P-SaT</h3>
+						<div class="section-heading-line"></div>
+						<br>
+						<br>
+					</div>
+					<div class="text-content">
+						<p class="text-justify" >L'initiative <b>UM6P-SaT</b> est une plateforme de formation pour les étudiants. Cette formation permettra d'initier les étudiants au design, à la fabrication et à la caractérisation d'un CubeSat. L’intérêt d’un CubeSat est l'accès au spatial à bas coût.</p>
+						<p class="text-justify" >L’UM6P CubeSat 1U sera développé par les étudiants volontaires de l'UM6P. Ce CubeSat permettra l’étude du rayonnement CMB (Le fond diffus cosmologique), de hautes énergies, etc. Ces deux objectifs scientifiques et de formations permettront à la fois la qualification spatiale de nouveaux types de détecteurs, Graphene/Black Phosphorus, de photomultiplicateur, ou encore une matrice de détecteur (Black Phosphorus photodiode). L'initiative UM6P-SaT bénéficie de l’expertise du centre national de l'Espace et de la nano-académie du CNES.​ </p>
+						<p class="text-justify" >UM6P-SaT est actuellement en phase 0, c’est-à-dire la pré-étude de faisabilité et de dimensionnement du CubeSat avec l’objectif d’être prêt pour un lancement fin 2026.​ </p>
+					</div>
+
+					<!-- Lists Start 
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-12">
+							<ul class="primary-list">
+								<li><i class="fa fa-check-square"></i>XXX</li>
+								<li><i class="fa fa-check-square"></i>XXX</li>
+								<li><i class="fa fa-check-square"></i>XXX</li>
+							</ul>								
+						</div>
+						<div class="col-md-6 col-sm-6 col-12">
+							<ul class="primary-list">
+								<li><i class="fa fa-check-square"></i>XXX</li>
+								<li><i class="fa fa-check-square"></i>XXX</li>
+								<li><i class="fa fa-check-square"></i>XXX</li>
+							</ul>								
+						</div>
+					</div>	
+					Lists End -->
+
+					<div class="mt-30">
+						<a href="file/Poster_CubeSat.pdf" class="primary-button button-sm">Poster Download</a>
+						<a href="https://docs.google.com/forms/d/e/1FAIpQLScFwm7_Zh4UNF2Qrp0LRI7EVYuOH9xmLVb8phhuQHhmooro4w/viewform" class="primary-button button-sm">Join Us</a>	
+					</div>			
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
+<!-- Info Section END -->
+
+
+<!-- Blog Grid Section END -->
+
+<!-- Our parteners  -->
+<div id="simulation" >
+<div  class="section-block-grey section-sm">
+	<div class="container">
+		<div class="section-heading center-holder">
+			<h3  class="bold">Simulation</span></h3>
+			<div class="section-heading-line"></div>
+					<!-- Tabs Start -->
+					<div class="default-tabs">
+						<div class='tabs tabs_animate mt-20'>
+							<ul class="tab-menu left-holder">
+								<li><a href="#tab-1">Cube Assemblé</a></li>
+								<li><a href="#tab-2">Cube ouvert en 2 parties</a></li>
+								<li><a href="#tab-3">Cube en vue éclatée</a></li>
+							</ul>
+			
+							<!-- Tab 1 Start -->
+							<div id='tab-1' class="clearfix tab-body inner-30">
+								
+
+							</div>
+							<!-- Tab 1 End -->
+			
+							<!-- Tab 2 Start -->
+							<div id='tab-2' class="clearfix tab-body inner-30">
+								
+		
+							</div>
+							<!-- Tab 2 End -->
+			
+							<!-- Tab 3 Start -->
+							<div id='tab-3' class="clearfix tab-body inner-30">
+								
+
+							</div>
+							<!-- Tab 3 End -->
+						</div>	
+					</div>				
+					<!-- Tabs End -->				
+		</div>			
+	</div>
+</div>
+</div>
+<!-- Our parteners END -->
+
+
+
+<!-- Blog Grid Section START -->
+<div class="section-block">
+	<div class="container">
+		<div class="section-heading center-holder">
+			<h3 id="event" class="bold">Event <span color="blue">UM6P-SaT</span></h3>
+			<div class="section-heading-line"></div>
+		</div>	
+		<div class="row mt-40">
+			<div class="col-md-4 col-sm-6 col-12">
+				<div class="blog-grid-simple">
+					<h4><a href="#">Conference : CNES and UM6P-SaT</a></h4>
+					<p class="text-justify">With Mr.Jean-Yves Le Gall, General conference on the stakes of the space policy
+						in the world.</p><br>
+					<div class="blog-grid-simple-content">
+						<div class="blog-grid-simple-date">
+							<div class="row">
+								<div class="col-md-2 col-sm-2 col-2 pr-0">
+									<i class="fa fa-calendar"></i>
+								</div>
+								<div class="col-md-5 col-sm-5 col-5 pl-0">
+									<h5>March 9, 2022</h5>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6 col-12">
+				<div class="blog-grid-simple">
+					<h4><a href="#">Seminar 1 : CNES and UM6P-SaT</a></h4>
+					<p class="text-justify"> With Mr.Nicolas Verdier, Seminar on nanosats : the Nanolab Academy program and the EYESAT example, National Centre for Space Studies , CNES, Toulouse.</p>
+					<div class="blog-grid-simple-content">
+						<div class="blog-grid-simple-date">
+							<div class="row">
+								<div class="col-md-2 col-sm-2 col-2 pr-0">
+									<i class="fa fa-calendar"></i>
+								</div>
+								<div class="col-md-5 col-sm-5 col-5 pl-0">
+									<h5>March 10, 2022</h5>
+								</div>						
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-4 col-sm-6 col-12">	
+				<div class="blog-grid-simple">
+					<h4><a href="#">Seminar 2 : CNES and UM6P-SaT</a></h4>
+					<p class="text-justify">With Mr.Jean Luc Gall, Seminar on the Introduction to CNES engineering tools for the dimensioning of a nanosatellite, National Centre for Space Studies , CNES, Toulouse.</p>
+					<div class="blog-grid-simple-content">
+						<div class="blog-grid-simple-date">
+							<div class="row">
+								<div class="col-md-2 col-sm-2 col-2 pr-0">
+									<i class="fa fa-calendar"></i>
+								</div>
+								<div class="col-md-5 col-sm-5 col-5 pl-0">
+									<h5>March 11, 2022</h5>
+								</div>					
+							</div>	
+						</div>
+					</div>
+				</div>				
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Blog Grid Section END -->
+
+<!-- Our parteners  -->
+<div class="section-block-grey section-sm">
+	<div class="container">
+		<div class="section-heading center-holder">
+			<h3 id="parteners" class="bold">Our Partners</span></h3>
+			<div class="section-heading-line"></div>
+			<br>
+			<br>
+			<div class="item">
+            	<img src="img/Partenaires/cnes.png" alt="img">  
+            </div>
+		</div>			
+	</div>
+</div>
+<!-- Our parteners END -->
+
+<!-- Team Members Section START 
+<div class="section-block-grey">
+	<div class="container">
+		<div class="section-heading center-holder">
+			<h2 id="team" class="bold">Team</h2>
+			<div class="section-heading-line"></div>
+			<br>
+			<br>		
+		</div>			
+		<div class="row mt-30">
+			<div class="owl-carousel owl-theme" id="team-block"> 
+				<div class="team-block">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-12">
+							<div class="team-block-text">
+								<h4>Haytam EL YOUSSFI</h4>
+								<h6 class="italic libre-baskerville">XXX</h6>
+								<p>PhD Student UM6P-CRSA, Ingénieur BIG DATA & Data Science.</p>
+								<ul>
+									<li><a  target="_blank" href="https://www.linkedin.com/in/haytam-el-youssfi/"><i class="fab fa-linkedin"></i></a></li>
+									<li><a  target="_blank" href="https://twitter.com/HaytamYoussfi"><i class="fab fa-twitter"></i></a></li>
+									<li><a  target="_blank" href="https://www.instagram.com/haytam.elyoussfi/"><i class="fab fa-instagram"></i></a></li>
+									<li><a  target="_blank" href="https://crsa.um6p.ma/people/HAYTAM-ELYOUSSFI-/?id=624bf01fbebd012ab0efa416"><i class="fab fa-google"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-12">
+							<div class="team-block-img">
+								<img src="" alt="img"> 
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>	
+	</div>
+</div> -->
+<!-- Team Members Section END -->
+
+<!-- Contact Form Section START -->
+<div id="contact" class="section-block-parallax jarallax black-overlay-70" data-jarallax data-speed="0.6"  style="background-image: url('https://miro.medium.com/max/1200/1*ejSLIJ9OGlPjrIGVzZhuPw.jpeg');">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-12 col-12">
+				<div class="section-heading white-color left-holder wow fadeIn animated" data-wow-delay=".1s">
+					<h2 id="contact" class="bold">Contact us</h2>
+					<div class="section-heading-line"></div>
+				</div>
+
+				<!-- Contact icons Start -->
+				<div class="mt-0">
+
+					<div class="contact-icon-box-sm wow fadeIn animated" data-wow-delay=".2s" data-wow-duration="1.5s">
+						<i class="icon-earth-globe"></i>
+						<h4>Our Locations</h4>
+						<h5>Benguerir, Morocco</h5>
+					</div>
+
+					<div class="contact-icon-box-sm wow fadeIn animated" data-wow-delay=".3s" data-wow-duration="1.5s">
+						<i class="icon-email"></i>
+						<h4>Our Email</h4>
+						<h5>UM6PSaT@um6p.onmicrosoft.com</h5>
+					</div>										
+				</div>
+				<!-- Contact icons End -->
+			</div>
+
+			<!-- Contact Form Column Start -->
+			<div class="col-md-5 col-sm-12 col-12 offset-md-1 wow fadeIn animated" data-wow-delay=".3s" data-wow-duration="1.5s">
+				<div class="contact-form-md white-background">
+					<!-- Form Start -->
+					<form method="get" action="#" class="mt-30">
+						<input type="text" name="name" placeholder="Your Name*">
+						<input type="email" name="email" placeholder="Your Email*">
+						<input type="text" name="subject" placeholder="Subject*">
+						<textarea name="message" placeholder="Your Message*"></textarea>
+						<button type="submit" class="primary-button button-sm">Send Message</button>						
+					</form>
+					<!-- Form End -->
+				</div>
+			</div>	
+			<!-- Contact Form Column End -->		
+		</div>
+	</div>
+</div>
+<!-- Contact Form Section END -->
+
+<!-- Footer START -->
+<footer class="footer-style-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-sm-12 offset-md-1">
+				<div class="row">
+					<div class="col-md-4 col-sm-12 col-12 center-holder-xs">
+						<p>© 2022. All Rights Reserved.</p>
+					</div>	
+					<div class="col-md-4 col-sm-6 col-12 center-holder">
+						<img src="img/logos/sat.png" alt="logo" id="footer_logo">
+					</div>	
+				</div>		
+			</div>										
+		</div>
+	</div>
+</footer>
+<!-- Footer END -->
+
+<!-- Scroll to top button Start -->
+<a href="#" class="scroll-to-top"><i class="fas fa-chevron-up"></i></a>	
+<!-- Scroll to top button End -->
+
+
+
+<!-- Jquery -->
+<script src="js/jquery.min.js"></script>
+
+<!-- Plugins JS-->
+<script src="js/plugins.js"></script>	
+
+<!-- Navbar JS -->
+<script src="js/navigation.js"></script>
+<script src="js/navigation.fixed.js"></script>
+
+<!-- Google Map -->
+<script src="js/map.js"></script>
+
+<!-- Main JS -->
+<script src="js/main.js"></script>
+
+</body>
 </html>
